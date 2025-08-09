@@ -1,0 +1,574 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top left, #001f3f, #000428, #004e92);
+  color: #fff;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00d8ff;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  align-items: center;
+}
+
+.portafolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 50%;
+}
+
+.portafolio {
+  padding: 60px 20px;
+}
+
+.hero-img {
+  width: 300px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 50%;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 35px rgba(0, 255, 255, 0.4);
+}
+
+.portafolio-descripcion {
+  text-align: center;
+  width: 50%;
+  padding: 70px 20px;
+  position: relative;
+}
+
+.portafolio-descripcion {
+  max-width: 750px;
+  margin: 80px auto;
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.portafolio-descripcion h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.nombre {
+  background: linear-gradient(90deg, #c6e808, #f8f8fb, #03f42b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 4s ease infinite;
+  background-size: 300% 300%;
+}
+
+.mt-2 {
+  background: linear-gradient(90deg, #0015ff, #00ff15, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 5s ease infinite;
+  font-size: 2rem;
+  margin-bottom: 20px;
+
+}
+
+.highlight {
+  background: linear-gradient(90deg, #00f5ff, #ff00ff, #ff9900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 5s ease infinite;
+  background-size: 300% 300%;
+}
+
+.portafolio-descripcion h6 {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.95;
+  margin-bottom: 15px;
+}
+
+strong {
+  background: linear-gradient(90deg, #ff0080, #ffcc00, #00ffea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 6s ease infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.descripcion {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px;
+  text-align: justify;
+  font-family: 'Poppins', sans-serif;
+  color: #d1d1d1;
+  /* Gris claro */
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.descripcion strong {
+  color: #00f5ff;
+  /* Acento vibrante para resaltar */
+  font-weight: 600;
+}
+
+.descripcion h6 {
+  margin-bottom: 15px;
+}
+
+.separador {
+  background-color: #e80606;
+  /* Color verde tipo WhatsApp */
+  width: 100%;
+  height: 4px;
+  /* Puedes ajustar a 1px, 2px o lo que prefieras */
+  margin: 60px 0;
+  /* Espaciado arriba y abajo */
+  padding: 0;
+}
+
+
+@media (max-width: 768px) {
+
+  .portafolio,
+  .portafolio-descripcion {
+    width: 100%;
+    padding: 50px 20px;
+  }
+}
+
+aside {
+  position: relative;
+  z-index: 1;
+}
+
+aside::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.titulos {
+  color: #35940f;
+}
+
+/* Sección Sobre mí */
+#sobremi {
+  width: 100%;
+  background: transparent;
+  /* Sin fondo */
+  padding: 60px 0;
+}
+
+.tech-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columnas */
+  gap: 35px;
+  /* más espacio entre ellas */
+  justify-items: center;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.tech-box {
+  background-color: #061e03;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  /* más espacio interno */
+  border-radius: 15px;
+  border: 3px solid currentColor;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+  /* más ancho */
+  height: 140px;
+  /* más alto */
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.tech-box i {
+  font-size: 3rem;
+  /* ícono más grande */
+  margin-bottom: 10px;
+}
+
+.tech-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 12px currentColor;
+}
+
+
+/* Colores */
+.border-html {
+  color: #e34f26;
+}
+
+.border-css {
+  color: #1572b6;
+}
+
+.border-bootstrap {
+  color: #7952b3;
+}
+
+.border-js {
+  color: #f7df1e;
+}
+
+.border-java {
+  color: #f89820;
+}
+
+.border-python {
+  color: #3776ab;
+}
+
+.border-react {
+  color: #61dafb;
+}
+
+.border-postgres {
+  color: #336791;
+}
+
+.border-github {
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .tech-box {
+    width: 70px;
+    padding: 10px;
+  }
+
+  .tech-box i {
+    font-size: 1.8rem;
+  }
+
+  .tech-box p {
+    font-size: 0.75rem;
+  }
+}
+
+.background-3d {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #074004, #000);
+
+}
+
+/* Tarjetas modernas */
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(12px);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 30px rgba(0, 255, 255, 0.2);
+  border-color: rgba(0, 255, 255, 0.4);
+}
+
+/* Iconos con fondo circular y degradado */
+.icon-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00f5ff, #ff00d4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px auto;
+  color: white;
+  font-size: 1.8rem;
+  box-shadow: 0px 5px 15px rgba(255, 0, 212, 0.3);
+}
+
+.service-card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0px 0px 40px rgba(6, 167, 22, 0.514);
+  border-color: rgba(17, 0, 255, 0.233);
+}
+
+.icon-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00f5ff, #ff00d4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px auto;
+  color: white;
+  font-size: 1.8rem;
+  box-shadow: 0px 5px 15px rgba(255, 0, 212, 0.3);
+}
+
+.service-card h5 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.service-card p {
+  color: #ddd;
+  font-size: 0.95rem;
+}
+
+/* Estado inicial sin animar */
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(12px);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación más lenta y suave */
+.fade-up-active.anim-1 {
+  animation: fadeUp 1.3s ease-out forwards 0.1s;
+}
+
+.fade-up-active.anim-2 {
+  animation: fadeUp 1.3s ease-out forwards 0.3s;
+}
+
+.fade-up-active.anim-3 {
+  animation: fadeUp 1.3s ease-out forwards 0.5s;
+}
+
+.fade-up-active.anim-4 {
+  animation: fadeUp 1.3s ease-out forwards 0.7s;
+}
+
+.fade-up-active.anim-5 {
+  animation: fadeUp 1.3s ease-out forwards 0.9s;
+}
+
+.fade-up-active.anim-6 {
+  animation: fadeUp 1.3s ease-out forwards 1.1s;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------------------Proyectos-------------------------------------*/
+.tituloproyecto {
+  text-align: center;
+  color: #0400ff;
+}
+/* Tarjeta de proyecto */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 0px 30px rgba(6, 3, 187, 0.988);
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-content h5 {
+  color: #fff;
+  font-weight: bold;
+}
+
+.project-content p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* Botones personalizados */
+.btn-demo,
+.btn-code {
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-code {
+  background: linear-gradient(135deg, #0095ff6b, #04c711);  
+  color: #fff;
+}
+
+.btn-demo:hover,
+.btn-code:hover {
+  transform: scale(1.05);
+}
+
+/* ------------------------contacto--------------------*/
+/* Contenedor de iconos */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Iconos circulares */
+.icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* Colores oficiales */
+.icon.whatsapp { background: #25D366; }
+.icon.facebook { background: #1877F2; }
+.icon.github { background: #333; }
+.icon.linkedin { background: #0077b5; }
+
+/* Efecto hover */
+.icon:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.25);
+}
+/* ----------------------------------------Footer-------------------------------------- */
+footer {
+  margin-top: 20px;
+}
+.footer-modern {
+  background: rgba(1, 39, 5, 0.837);
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.footer-modern small {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.footer-modern .brand {
+  background: linear-gradient(45deg, #ff0000, #00ff04);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.footer-modern small:hover {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.btn-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  background-color: #20b857;
+}
+
+.btn-whatsapp i {
+  pointer-events: none;
+}
