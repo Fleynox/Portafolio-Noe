@@ -13,3 +13,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   cards.forEach(card => observer.observe(card));
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const boxes = document.querySelectorAll(".descripcion-box");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        if (index === 0) {
+          entry.target.classList.add("aparecer-izquierda");
+        } else {
+          entry.target.classList.add("aparecer-derecha");
+        }
+      } else {
+        // Quita clases para que se repita animación al volver
+        entry.target.classList.remove("aparecer-izquierda", "aparecer-derecha");
+      }
+    });
+  }, { threshold: 0.3 });
+
+  boxes.forEach(box => observer.observe(box));
+});
