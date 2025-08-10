@@ -69,7 +69,7 @@ section {
 }
 
 .portafolio-descripcion h1 {
-  font-size: 2.8rem;
+  font-size: 2.3rem;
   margin-bottom: 10px;
   font-weight: 700;
 }
@@ -140,8 +140,14 @@ strong {
     transform: translateY(0);
   }
 }
+.desarrollador {
+  background: linear-gradient(135deg, #0b581c, #58190b71);
+  border-radius: 15px;
+}
 
 .descripcion {
+  background: linear-gradient(135deg, #0b581c, #58190b71);
+  border-radius: 15px;
   max-width: 800px;
   margin: 30px auto;
   padding: 0 20px;
@@ -198,111 +204,136 @@ aside::before {
 }
 
 .titulos {
-  color: #35940f;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1be70c;
+  text-shadow: 0 0 10px #00e0ff, 0 0 20px #00e0ff;
 }
 
-/* Sección Sobre mí */
-#sobremi {
-  width: 100%;
-  background: transparent;
-  /* Sin fondo */
-  padding: 60px 0;
+/* -------------------------------------Sección Sobre mí-------------------------------------------- */
+
+/* Contenedor en fila */
+.descripcion-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap; /* Para que en móvil se acomode */
+  margin-bottom: 40px;
 }
 
+/* Caja estilizada */
+.descripcion-box {
+  flex: 1 1 45%; /* Que ocupen la mitad del ancho */
+  min-width: 300px;
+  background: linear-gradient(135deg, #180f45, #0b581c);
+  padding: 25px;
+  border-radius: 16px;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Texto */
+.descripcion-box p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Efecto hover */
+.descripcion-box:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+  background: linear-gradient(135deg, #1c4310, #530a0a);
+}
+
+
+/* Contenedor de tecnologías */
 .tech-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* 3 columnas */
-  gap: 35px;
-  /* más espacio entre ellas */
-  justify-items: center;
-  padding: 40px 0;
-  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
 }
 
+/* Caja de tecnología */
 .tech-box {
-  background-color: #061e03;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 25px;
-  /* más espacio interno */
-  border-radius: 15px;
-  border: 3px solid currentColor;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 300px;
-  /* más ancho */
-  height: 140px;
-  /* más alto */
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 12px;
   text-align: center;
-  font-size: 1.2rem;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .tech-box i {
-  font-size: 3rem;
-  /* ícono más grande */
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
+.tech-box p {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Hover animado */
 .tech-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 12px currentColor;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
 }
 
+/* Colores por tecnología */
+.border-html { background: linear-gradient(135deg, #e44d26, #f16529); }
+.border-css { background: linear-gradient(135deg, #264de4, #2965f1); }
+.border-bootstrap { background: linear-gradient(135deg, #563d7c, #7952b3); }
+.border-js { background: linear-gradient(135deg, #f0db4f, #f7df1e); color: black; }
+.border-java { background: linear-gradient(135deg, #f89820, #e76f00); }
+.border-python { background: linear-gradient(135deg, #306998, #4B8BBE); }
+.border-react { background: linear-gradient(135deg, #61dafb, #21a1f1); color: black; }
+.border-postgres { background: linear-gradient(135deg, #336791, #4f86c6); }
+.border-mysql { background: linear-gradient(135deg, #00758f, #1d9fbb); }
+.border-github { background: linear-gradient(135deg, #333, #444); }
 
-/* Colores */
-.border-html {
-  color: #e34f26;
-}
-
-.border-css {
-  color: #1572b6;
-}
-
-.border-bootstrap {
-  color: #7952b3;
-}
-
-.border-js {
-  color: #f7df1e;
-}
-
-.border-java {
-  color: #f89820;
-}
-
-.border-python {
-  color: #3776ab;
-}
-
-.border-react {
-  color: #61dafb;
-}
-
-.border-postgres {
-  color: #336791;
-}
-
-.border-github {
-  color: #ffffff;
-}
-
-/* Responsive */
-@media (max-width: 576px) {
-  .tech-box {
-    width: 70px;
-    padding: 10px;
+/* Animaciones */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
   }
-
-  .tech-box i {
-    font-size: 1.8rem;
-  }
-
-  .tech-box p {
-    font-size: 0.75rem;
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Estado inicial antes de animar */
+.descripcion-box {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* Clases que se activan al aparecer */
+.descripcion-box.aparecer-izquierda {
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.descripcion-box.aparecer-derecha {
+  animation: fadeInRight 0.8s ease forwards;
+}
+
 
 .background-3d {
   position: fixed;
@@ -312,7 +343,7 @@ aside::before {
 
 }
 
-/* Tarjetas modernas */
+/* -----------------------------------------Tarjetas modernas------------------------------------------- */
 .service-card {
   background: rgba(255, 255, 255, 0.05);
   padding: 30px 20px;
@@ -353,7 +384,7 @@ aside::before {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #00f5ff, #ff00d4);
+  background: linear-gradient(135deg, #b70303, #05e135);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -424,6 +455,11 @@ aside::before {
 }
 
 /* -------------------------------Proyectos-------------------------------------*/
+.ProyecDescri {
+  background: linear-gradient(135deg, #0b581c, #58190b71);
+  border-radius: 15px;
+  padding: 10px;
+}
 .tituloproyecto {
   text-align: center;
   color: #0400ff;
