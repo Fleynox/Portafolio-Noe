@@ -46,9 +46,11 @@
       </div>
 
       <div class="portafolio-descripcion">
-        <h1>Desarrollador <span class="nombre">Fullstack</span></h1>
-        <h2 id="typed1" class="mt-2"></h2>
-        <h2 class="mt-2">Estudiante de Desarrollo de Sistemas de Información</h2>
+        <div class="desarrollador">
+          <h1>Desarrollador <span class="nombre">Fullstack</span></h1>
+          <h2 id="typed1" class="mt-2"></h2>
+          <h2 class="mt-2">Estudiante de Desarrollo de Sistemas de Información</h2>
+        </div>
         <div class="descripcion">
           <h6>
             Me dedico a desarrollar <strong>aplicaciones web modernas, rápidas y optimizadas</strong>,
@@ -70,45 +72,55 @@
     <aside id="sobremi" class="py-5">
       <div class="container">
         <h2 class="text-center mb-4 titulos">Sobre mí</h2>
-        <p class="lead text-center text-secondary">
-          Soy un desarrollador web fullstack apasionado por crear aplicaciones modernas, rápidas y optimizadas para
-          negocios, emprendedores y proyectos personales.
-        </p>
+
+        <!-- Descripción lado a lado -->
+        <div class="descripcion-container">
+          <div class="descripcion-box">
+            <p class="lead">
+              Soy un desarrollador web <strong>Full Stack</strong>, estudiante de Desarrollo de Sistemas de Información.
+              Apasionado por crear aplicaciones modernas, rápidas y optimizadas para negocios, emprendedores y proyectos
+              personales.
+            </p>
+          </div>
+          <div class="descripcion-box">
+            <p class="lead">
+              Trabajo con las principales tecnologías del desarrollo web y backend, siempre buscando aprender y mejorar
+              para ofrecer soluciones seguras, escalables e innovadoras.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tecnologías -->
+        <h3 class="text-center subtitulo">Tecnologías y Lenguajes</h3>
         <div class="tech-container">
-          <div class="tech-box border-html">
-            <i class="fab fa-html5"></i>
-            <p>HTML</p>
+          <div class="tech-box border-html"><i class="fab fa-html5"></i>
+            <p>HTML5</p>
           </div>
-          <div class="tech-box border-css">
-            <i class="fab fa-css3-alt"></i>
-            <p>CSS</p>
+          <div class="tech-box border-css"><i class="fab fa-css3-alt"></i>
+            <p>CSS3</p>
           </div>
-          <div class="tech-box border-bootstrap">
-            <i class="fab fa-bootstrap"></i>
+          <div class="tech-box border-bootstrap"><i class="fab fa-bootstrap"></i>
             <p>Bootstrap</p>
           </div>
-          <div class="tech-box border-js">
-            <i class="fab fa-js"></i>
+          <div class="tech-box border-js"><i class="fab fa-js"></i>
             <p>JavaScript</p>
           </div>
-          <div class="tech-box border-java">
-            <i class="fab fa-java"></i>
+          <div class="tech-box border-java"><i class="fab fa-java"></i>
             <p>Java</p>
           </div>
-          <div class="tech-box border-python">
-            <i class="fab fa-python"></i>
+          <div class="tech-box border-python"><i class="fab fa-python"></i>
             <p>Python</p>
           </div>
-          <div class="tech-box border-react">
-            <i class="fab fa-react"></i>
+          <div class="tech-box border-react"><i class="fab fa-react"></i>
             <p>React</p>
           </div>
-          <div class="tech-box border-postgres">
-            <i class="fas fa-database"></i>
+          <div class="tech-box border-postgres"><i class="fas fa-database"></i>
             <p>PostgreSQL</p>
           </div>
-          <div class="tech-box border-github">
-            <i class="fab fa-github"></i>
+          <div class="tech-box border-mysql"><i class="fas fa-database"></i>
+            <p>MySQL</p>
+          </div>
+          <div class="tech-box border-github"><i class="fab fa-github"></i>
             <p>GitHub</p>
           </div>
         </div>
@@ -193,11 +205,12 @@
     <aside id="proyectos" class="glass-effect">
       <div class="container">
         <h2 class="text-center mb-4 text-gradient titulos">Proyectos</h2>
-        <p class="lead text-center text-light mb-5">
-          Desarrollamos sitios web y aplicaciones modernas para negocios, enfocados en mejorar su presencia digital,
-          optimizar procesos y atraer más clientes mediante un diseño profesional y funcional.
-        </p>
-
+        <div class="ProyecDescri">
+          <p class="lead text-center text-light mb-5">
+            Desarrollamos sitios web y aplicaciones modernas para negocios, enfocados en mejorar su presencia digital,
+            optimizar procesos y atraer más clientes mediante un diseño profesional y funcional.
+          </p>
+        </div>
         <div class="row g-4">
           <!-- Proyecto 1 -->
           <div class="col-md-4">
@@ -235,13 +248,13 @@
           <a href="https://wa.me/+51976210052" target="_blank" class="icon whatsapp">
             <i class="fab fa-whatsapp"></i>
           </a>
-          <a href="https://facebook.com/tuusuario" target="_blank" class="icon facebook">
+          <a href="https://www.facebook.com/profile.php?id=100089909221263" target="_blank" class="icon facebook">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="https://github.com/tuusuario" target="_blank" class="icon github">
+          <a href="#" target="_blank" class="icon github">
             <i class="fab fa-github"></i>
           </a>
-          <a href="https://linkedin.com/in/tuusuario" target="_blank" class="icon linkedin">
+          <a href="#" target="_blank" class="icon linkedin">
             <i class="fab fa-linkedin-in"></i>
           </a>
         </div>
@@ -282,4 +295,5 @@
     });
   </script>
 </body>
+
 </html>
